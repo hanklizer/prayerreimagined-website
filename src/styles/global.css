@@ -1,0 +1,23 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+	input,
+	textarea {
+		@apply border border-gray-300;
+	}
+
+}
+
+@layer utilities {
+	.utils__clickable {
+		@apply hover:brightness-90 cursor-pointer utils__duration ease-out;
+	}
+
+	.utils__duration {
+		@apply duration-100;
+	}
+}
