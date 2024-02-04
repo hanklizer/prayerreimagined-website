@@ -29,7 +29,9 @@ const fieldsArr: FieldData[] = fieldsDataJSON as FieldData[];
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-white w-screen h-screen overflow-x-hidden">
 		<nav class="p-4 px-8  bg-white sticky top-0 z-40 opacity-70  flex justify-between items-center">
@@ -48,14 +50,21 @@ const fieldsArr: FieldData[] = fieldsDataJSON as FieldData[];
 				<li>
 					<a href="/fields">Fields</a>
 				</li>
+				<li>
+	    <a href="/blogs">Blogs</a>
+		      </li>
+    <li>
+      <a href="/resources">Resources</a>
+    </li>
 
 			</ul>
 		</nav>
 
 		<main class="flex flex-col   gap-16">
-
 		<slot />
-<footer class="w-full max-w-[85rem] py-10 px-8  mx-auto  ">
+		</main>
+
+<footer class="w-full max-w-[85rem] py-10 px-8  mx-auto  my-24">
   <!-- Grid -->
   <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
     <div class="col-span-full hidden lg:col-span-1 lg:block">
@@ -240,6 +249,5 @@ const fieldsArr: FieldData[] = fieldsDataJSON as FieldData[];
     </div>
   </div>
 </footer>
-		</main>
 	</body>
 </html>

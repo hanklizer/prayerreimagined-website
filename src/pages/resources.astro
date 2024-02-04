@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const peopleData = [
+    {
+        name: "Person A",
+        title: "Title A",
+        description: "Description A",
+        image: "https://via.placeholder.com/150",
+        link: "https://www.google.com"
+    },
+    {
+        name: "Person B",
+        title: "Title B",
+        description: "Description B",
+        image: "https://via.placeholder.com/150",
+        link: "https://www.google.com"
+    },
+    {
+        name: "Person C",
+        title: "Title C",
+        description: "Description C",
+        image: "https://via.placeholder.com/150",
+        link: "https://www.google.com"
+    },
+    {
+        name: "Person D",
+        title: "Title D",
+        description: "Description D",
+        image: "https://via.placeholder.com/150",
+        link: "https://www.google.com"
+    }
+]
+---
+
+
+<Layout title="Resources">
+    <div class="px-8 flex flex-col gap-8">
+  <h1 class="text-4xl ">People & Organizations</h1>
+        <ul class="flex  gap-8">
+{
+    peopleData.map((person, index) => (
+    <li class="border p-8 shadow-lg cursor-pointer group hover:-translate-y-1 hover:translate-x-1 duration-200">
+        <a class="flex flex-col gap-2 " href={person.link} target="_blank">
+            <img src={person.image} alt={person.name} class="rounded-full hidden" />
+            <h2 class="text-2xl">{person.name}</h2>
+            <h3 class="text-xl">{person.title}</h3>
+            <p>{person.description}</p>
+        </a>
+
+        </li>
+    ))
+
+            }
+        </ul>
+    </div>
+</Layout>

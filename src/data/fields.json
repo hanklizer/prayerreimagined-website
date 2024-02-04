@@ -1,26 +1,37 @@
 [
 	{
 		"name": "Consciousness",
-		"description": "Lorem ipsum dolor sit amet"
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
 	},
 	{
 		"name": "Intention",
-		"description": "Lorem ipsum dolor sit amet"
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
 	},
 	{
 		"name": "Entanglement",
-		"description": "Lorem ipsum dolor sit amet"
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
 	},
 	{
 		"name": "Reiki",
-		"description": "Lorem ipsum dolor sit amet"
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
 	},
 	{
 		"name": "Chakra",
-		"description": "Lorem ipsum dolor sit amet"
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
 	},
 	{
 		"name": "Seeds",
-		"description": "Lorem ipsum dolor sit amet"
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
+	},
+	{
+		"name": "Quantum Concepts",
+		"description": "Lorem ipsum dolor sit amet",
+		"content": ""
 	}
 ]

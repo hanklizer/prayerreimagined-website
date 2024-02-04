@@ -21,7 +21,7 @@ const fieldsArr: FieldData[] = fieldsDataJSON as FieldData[];
 	</section>
 	<section class=" flex mx-8  flex-col gap-4">
 		<h1 class="text-3xl">About</h1>
-		<p>It was the 1960s when I was growing up coming of age with the typical teenage turbulence,  my search for identity, my place in the world etc. Curiously it was much the same with American society in that it seemed to be experiencing its own turbulence. There was the blossoming of the hippie counterculture; the rejection of the status quo. The younger generations was embracing a movement of experimentation, individuality, music (the British musical invasion) and different ideas such as 'Don't trust amyone over 30!'. Meanwhile I was rapidly expanding my interest and library with books on topics like UFOs astrology, numerology, I Ching, Tarot and such. Fast forward to present day and my interest in the power of prayer. Welcome to prayer reimagined.</p>
+		<p>It was the 1960s when I was growing up coming of age with the typical teenage turbulence,  my search for identity, my place in the world etc. Curiously it was much the same with American society in that it seemed to be experiencing its own turbulence. There was the blossoming of the hippie counterculture; the rejection of the status quo. The younger generations was embracing a movement of experimentation, individuality, music (the British musical invasion) and different ideas such as 'Don't trust anyone over 30!'. Meanwhile I was rapidly expanding my interest and library with books on topics like UFOs astrology, numerology, I Ching, Tarot and such. Fast forward to present day and my interest in the power of prayer. Welcome to prayer reimagined.</p>
 	</section>
 	<section class=" mx-8 gap-4 flex flex-col ">
 		<h1 class="text-3xl">What is Prayer Reimagined</h1>
@@ -31,10 +31,11 @@ const fieldsArr: FieldData[] = fieldsDataJSON as FieldData[];
 		<h1 class="text-3xl">Fields</h1>
 		<div class="grid lg:grid-cols-3  md:grid-cols-2 w-full gap-4 ">
 			{fieldsArr.map((field: FieldData) => (
-				<div class="bg-blue-500 aspect-[25/7]  flex items-center justify-center group utils__clickable select-none">
+
+				<a href={`fields/${field.name.toLowerCase()}`} class="bg-blue-500 aspect-[25/7]  flex items-center justify-center group utils__clickable select-none">
 					<h3 class="text-white uppercase text-2xl group-hover:scale-110 tracking-wide utils__duration">{field.name}</h3>
 
-				</div>
+				</a>
 			))}
 		</div>
 	</section>

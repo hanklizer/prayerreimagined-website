@@ -3,8 +3,25 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="About Prayer Regimagined">
-  <div>
-    <h1>My Page</h1>
-    <p>This is my page</p>
-  </div>
+ <main class="container mx-8 py-8">
+        <section class="bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-semibold mb-4">Our Story</h2>
+            <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut facilisis libero. Nullam id venenatis lectus. Vivamus non efficitur tortor, et condimentum massa. Integer fringilla tristique lorem, id euismod augue.
+            </p>
+        </section>
+        
+        <section class="mt-8 bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-semibold mb-4">Our Team</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Team members -->
+                <div class="bg-gray-200 rounded-lg p-4">
+                    <img src="team-member1.jpg" alt="Team Member 1" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold">Hank Lizer</h3>
+                    <p class="text-gray-600">CEO</p>
+                </div>
+             
+            </div>
+        </section>
+    </main>
 </Layout>

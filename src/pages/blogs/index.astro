@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+<Layout title="Blogs">
+  <div class="min-h-screen px-8">
+    <h1 class="text-4xl my-12">Blogs</h1>
+    <section class="flex flex-col divide-y-2">
+{Array.from({length:10}).map((_, i) => (
+<div class="w-full py-8 items-center group hover:brightness-95 bg-white px-4 cursor-pointer duration-75 flex justify-between">
+    <span class="text-2xl tracking-wider group-hover:text-blue-500 ">DEC 12</span>
+    <span class="text-2xl">Title the Title</span>
+  </div>
+))}
+    </section>
+  </div>
+</Layout>

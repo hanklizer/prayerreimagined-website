@@ -1,0 +1,36 @@
+---
+
+import  fieldsDataJSON from '../../data/fields.json';
+import Layout from "../../layouts/Layout.astro"
+
+
+type FieldData = {
+	name: string;
+	image?: string;
+	description?: string;
+};
+
+
+
+
+export function getStaticPaths() {
+  
+const fieldsArr: FieldData[] = fieldsDataJSON as FieldData[];
+  const paths = fieldsArr.map((field) => ({
+    params: { id: field.name.toLowerCase() },
+  }));
+
+  return paths;
+
+}
+
+const { id } = Astro.params;
+---
+
+<Layout title={`${id}`}>
+  <section class="px-8 h-40 bg-blue-500 w-full flex flex-col gap-16 ">
+    <h1 class="uppercase my-12 text-6xl text-white items-center">{id}</h1>
+  </section>
+    <p class="text-lg px-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, adipisci? Libero fugiat explicabo consequuntur aut tempora, labore praesentium repellendus impedit ullam esse expedita, eum reprehenderit at, deleniti eveniet alias ipsum id minus? Harum molestias quis nostrum unde quasi sint assumenda, officiis voluptates eaque placeat fugiat eos provident! Delectus tempora facilis pariatur saepe? Aliquam vero perferendis cum autem, illum dolor in tenetur, neque dicta quidem obcaecati voluptate? Atque enim doloribus vel voluptatem ab amet ratione, perspiciatis, quae consectetur ipsum fugit dicta totam distinctio ut officiis, harum minus similique doloremque. Fuga velit animi ut ratione nobis eos expedita quidem minima voluptates id.</p>
+  <p class="text-lg px-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quaerat commodi voluptatum esse. Molestias nulla nemo, laboriosam enim ut atque iste dolor veritatis porro inventore eaque harum officiis iusto quo repellat animi vel! Incidunt doloribus tenetur tempora est officia accusantium assumenda recusandae similique cumque. Facere dolore quam minus magni nulla, repellat ipsam omnis non totam quasi quos praesentium similique repellendus quis repudiandae dolorem ipsa tempore. Amet molestiae voluptatum tempora eveniet cumque asperiores obcaecati, eligendi quis quisquam quos omnis optio eos praesentium! Veniam ipsum debitis optio consequuntur ipsam ad ducimus ex commodi libero modi quia reprehenderit temporibus deleniti illo et, repellendus quae deserunt odit dolor eveniet sunt quisquam totam? Facilis quibusdam autem nemo iusto eaque sunt placeat! Maiores nostrum dolore fuga ullam iste perferendis quo accusamus maxime. Error nam veniam explicabo vel doloremque voluptate sint, fuga vero, nesciunt quisquam eos libero, ex labore earum nostrum quaerat! Eius harum ipsa nam nostrum, sequi blanditiis voluptatum necessitatibus atque aspernatur ea quasi excepturi iste, fugiat assumenda perferendis repudiandae voluptate sed facere consectetur exercitationem odio quam sapiente autem! Modi culpa veritatis possimus illum voluptas, ipsa nihil ea consequuntur! Consequuntur iste voluptas eaque placeat, nulla magni ratione quibusdam laboriosam quas fugiat quasi ducimus blanditiis! Iusto, quam?</p>
+</Layout>
