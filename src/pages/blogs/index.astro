@@ -2,12 +2,17 @@
 import Layout from '../../layouts/Layout.astro'
 
 const posts = await Astro.glob('/src/pages/blogs/*.md')
+
+const averageReadingSpeedWPM = 238
 ---
 <Layout title="Blogs">
   <div class="min-h-screen px-8">
     <h1 class="text-4xl my-12">Blogs</h1>
     <section class="flex flex-col divide-y-2">
-{posts.map((post, i) => (
+{posts.map((post, i) => {
+  const wordsInPost = post.rawContent.toString().split(' ').length
+  const timeToRead = Math.ceil(wordsInPost / averageReadingSpeedWPM)
+  return (
   <a href={`/blogs/${post.frontmatter.id}`}>
 <div class="w-full py-8 items-center group hover:brightness-95 bg-white px-4 cursor-pointer duration-75 flex justify-between">
     <span class="text-2xl tracking-wider group-hover:text-blue-500 ">{new Date(post.frontmatter.date).toLocaleDateString('en-US', {
@@ -15,10 +20,14 @@ const posts = await Astro.glob('/src/pages/blogs/*.md')
   month: 'long',
   day: 'numeric',
 })}</span>
+      <div class="flex flex-col items-center">
     <span class="text-2xl">{post.frontmatter.title}</span>
+          <span class="text-blue-500">{timeToRead} minute read</span>
+      </div>
   </div>
   </a>
-))}
+)
+})}
     </section>
   </div>
 </Layout>
